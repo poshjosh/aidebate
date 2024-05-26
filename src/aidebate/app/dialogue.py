@@ -182,11 +182,11 @@ def get_chat_model_mappings() -> dict[str, any]:
 
 
 _model_mappings = {
-    'anthropic': ChatAnthropic,
+    'anthropic': ChatAnthropic,  # Rather ChatAnthropic of `langchain-anthropic`
     'azuremlchatonlineendpoint': AzureMLChatOnlineEndpoint,
     'baichuan': ChatBaichuan,
-    'bedrock': BedrockChat,
-    'cohere': ChatCohere,
+    'bedrock': BedrockChat,  # Rather ChatBedrock of `langchain_aws`
+    'cohere': ChatCohere,  # Rather use ChatCohere of `langchain_cohere`
     'coze': ChatCoze,
     'dappierai': ChatDappierAI,
     'deepinfra': ChatDeepInfra,
@@ -197,7 +197,7 @@ _model_mappings = {
     'fake-list.community': CommFakeListChatModel,
     'fake-messages-list': CoreFakeMessagesListChatModel,
     'fake-messages-list.community': CommFakeMessagesListChatModel,
-    'fireworks': ChatFireworks,
+    'fireworks': ChatFireworks,  # Rather use ChatFireworks of `langchain_fireworks`
     'friendli': ChatFriendli,
     'fake.generic': GenericFakeChatModel,
     'giga': CommGigaChat,

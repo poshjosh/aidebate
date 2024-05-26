@@ -1,34 +1,37 @@
 # Supported Models
 
-### The following chat models are supported:
+### Supported by default:
 
-* anthropic (langchain_community.chat_models.anthropic.ChatAnthropic)
 * baichuan (langchain_community.chat_models.baichuan.ChatBaichuan)
-* bedrock (langchain_community.chat_models.bedrock.BedrockChat)
-* cohere (langchain_community.chat_models.cohere.ChatCohere)
 * coze (langchain_community.chat_models.coze.ChatCoze)
 * deepinfra (langchain_community.chat_models.deepinfra.ChatDeepInfra)
 * edenai (langchain_community.chat_models.edenai.ChatEdenAI)
 * fake.parrot (langchain_core.language_models.fake_chat_models.ParrotFakeChatModel)
-* fireworks (langchain_community.chat_models.fireworks.ChatFireworks)
-* friendli (langchain_community.chat_models.friendli.ChatFriendli)
-* giga (langchain_community.chat_models.gigachat.GigaChat)
-* giga.llm (langchain_community.llms.gigachat.GigaChat)
-* javelinaigateway (langchain_community.chat_models.javelin_ai_gateway.ChatJavelinAIGateway)
-* mlflowaigateway (langchain_community.chat_models.mlflow_ai_gateway.ChatMLflowAIGateway)
 * human-input (langchain_community.chat_models.human.HumanInputChatModel)
-* kinetica (langchain_community.chat_models.kinetica.ChatKinetica)
 * llamaedge (langchain_community.chat_models.llama_edge.LlamaEdgeChatService)
 * ollama (langchain_community.chat_models.ollama.ChatOllama)
 * openai (langchain_openai.chat_models.base.ChatOpenAI)
 * pplx (langchain_community.chat_models.perplexity.ChatPerplexity)
-* premai (langchain_community.chat_models.premai.ChatPremAI)
-* qianfan (langchain_community.chat_models.baidu_qianfan_endpoint.QianfanChatEndpoint)
-* vertexai (langchain_community.chat_models.vertexai.ChatVertexAI)
 * yuan2 (langchain_community.chat_models.yuan2.ChatYuan2)
 * zhipuai (langchain_community.chat_models.zhipuai.ChatZhipuAI)
 
-### The following chat models will soon be supported:
+### Supported, but additional package(s) need to be installed. E.g. for `anthropic` install `langchain-anthropic`.
+
+* anthropic
+* bedrock
+* cohere
+* fireworks
+* friendli
+* giga
+* giga.llm
+* javelinaigateway
+* mlflowaigateway
+* kinetica
+* premai
+* qianfan
+* vertexai
+
+### Will soon be supported:
 
 * azuremlchatonlineendpoint (langchain_community.chat_models.azureml_endpoint.AzureMLChatOnlineEndpoint)
 * dappierai (langchain_community.chat_models.dappier.ChatDappierAI)
