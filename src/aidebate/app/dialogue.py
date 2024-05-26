@@ -1,10 +1,10 @@
 import copy
 import logging
-import warnings
 from typing import Callable, List
 
-from langchain.agents import initialize_agent, AgentType, load_tools
+from langchain.agents import initialize_agent, AgentType
 from langchain.memory import ConversationBufferMemory
+from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain_community.chat_models import HumanInputChatModel, ChatOllama, ChatAnthropic, \
     ChatBaichuan, BedrockChat, ChatCohere, ChatCoze, ChatDeepInfra, ErnieBotChat, ChatFireworks, \
     ChatFriendli, GigaChat as CommGigaChat, ChatGooglePalm, GPTRouter, ChatJavelinAIGateway, \
@@ -24,12 +24,6 @@ from langchain_core.language_models import BaseChatModel, GenericFakeChatModel, 
     FakeMessagesListChatModel as CoreFakeMessagesListChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-
-# TODO:
-#  1. Implement adequate tests.
-#  2. Replace deprecated methods.
-#  3. Remove this next line, which ignores DeprecationWarning.
-warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 logger = logging.getLogger(__name__)
 
@@ -53,10 +47,10 @@ class DialogueAgent:
 
     def speak(self) -> str:
         """
-        Applies the chatmodel to the message history
+        Applies the chat model to the message history
         and returns the message string
         """
-        message = self.model(
+        message = self.model.invoke(
             [
                 self.system_message,
                 HumanMessage(content="\n".join(self.message_history + [self.prefix])),
@@ -85,7 +79,7 @@ class DialogueAgentWithTools(DialogueAgent):
 
     def speak(self) -> str:
         """
-        Applies the chatmodel to the message history
+        Applies the chat model to the message history
         and returns the message string
         """
         agent_chain = initialize_agent(
@@ -222,7 +216,8 @@ _model_mappings = {
     'hunyuan': ChatHunyuan,
     'kinetica': ChatKinetica,
     'llamaedge': LlamaEdgeChatService,
-    'litellm': ChatLiteLLM, # Could not import litellm python package. Please install it with `pip install litellm`
+    # Could not import litellm python package. Please install it with `pip install litellm`
+    'litellm': ChatLiteLLM,
     'ollama': ChatOllama,
     'openai': ChatOpenAI,
     'paieas': PaiEasChatEndpoint,

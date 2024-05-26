@@ -157,7 +157,7 @@ class Debate:
     @staticmethod
     def _ask_ai(chat_model: BaseChatModel, system_msg: str, human_msg: str) -> str:
         prompt = [SystemMessage(content=system_msg), HumanMessage(content=human_msg)]
-        return chat_model(prompt).content
+        return chat_model.invoke(prompt).content
 
     @staticmethod
     def __require_min_length(name: str, value):

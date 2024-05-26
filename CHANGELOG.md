@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+Deprecation warnings by using langchain 0.2 specific methods.
+
 ## [0.0.1] - 2024-05-26
 
 ### Added
