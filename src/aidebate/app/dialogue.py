@@ -91,11 +91,12 @@ class DialogueAgentWithTools(DialogueAgent):
                 memory_key="chat_history", return_messages=True
             ),
         )
-        return agent_chain.run(
-            input="\n".join(
+        result = agent_chain.invoke({
+            "input": "\n".join(
                 [self.system_message.content] + self.message_history + [self.prefix]
             )
-        )
+        })
+        return result["output"]
 
 
 class DialogueSimulator:
@@ -183,7 +184,7 @@ def get_chat_model_mappings() -> dict[str, any]:
 
 _model_mappings = {
     'anthropic': ChatAnthropic,  # Rather ChatAnthropic of `langchain-anthropic`
-    'azuremlchatonlineendpoint': AzureMLChatOnlineEndpoint,
+    'azuremlonlineendpoint': AzureMLChatOnlineEndpoint,
     'baichuan': ChatBaichuan,
     'bedrock': BedrockChat,  # Rather ChatBedrock of `langchain_aws`
     'cohere': ChatCohere,  # Rather use ChatCohere of `langchain_cohere`
@@ -193,10 +194,10 @@ _model_mappings = {
     'edenai': ChatEdenAI,
     'erniebot': ErnieBotChat,
     'fake.parrot': ParrotFakeChatModel,
-    'fake-list': CoreFakeListChatModel,
-    'fake-list.community': CommFakeListChatModel,
-    'fake-messages-list': CoreFakeMessagesListChatModel,
-    'fake-messages-list.community': CommFakeMessagesListChatModel,
+    'fake.list': CoreFakeListChatModel,
+    'fake.list.community': CommFakeListChatModel,
+    'fake.messages-list': CoreFakeMessagesListChatModel,
+    'fake.messages-list.community': CommFakeMessagesListChatModel,
     'fireworks': ChatFireworks,  # Rather use ChatFireworks of `langchain_fireworks`
     'friendli': ChatFriendli,
     'fake.generic': GenericFakeChatModel,
