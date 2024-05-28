@@ -33,13 +33,13 @@
 
 ### Will soon be supported:
 
-* azuremlchatonlineendpoint (langchain_community.chat_models.azureml_endpoint.AzureMLChatOnlineEndpoint)
+* azuremlonlineendpoint (langchain_community.chat_models.azureml_endpoint.AzureMLChatOnlineEndpoint)
 * dappierai (langchain_community.chat_models.dappier.ChatDappierAI)
 * erniebot (langchain_community.chat_models.ernie.ErnieBotChat)
-* fake-list (langchain_core.language_models.fake_chat_models.FakeListChatModel)
-* fake-list.community (langchain_community.chat_models.fake.FakeListChatModel)
-* fake-messages-list (langchain_core.language_models.fake_chat_models.FakeMessagesListChatModel)
-* fake-messages-list.community (langchain_community.chat_models.fake.FakeMessagesListChatModel)
+* fake.list (langchain_core.language_models.fake_chat_models.FakeListChatModel)
+* fake.list.community (langchain_community.chat_models.fake.FakeListChatModel)
+* fake.messages-list (langchain_core.language_models.fake_chat_models.FakeMessagesListChatModel)
+* fake.messages-list.community (langchain_community.chat_models.fake.FakeMessagesListChatModel)
 * fake.generic (langchain_core.language_models.fake_chat_models.GenericFakeChatModel)
 * googlepalm (langchain_community.chat_models.google_palm.ChatGooglePalm)
 * gpt-router (langchain_community.chat_models.gpt_router.GPTRouter)
