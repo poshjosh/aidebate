@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    image: "poshjosh/aidebate:${DOCKER_IMAGE_TAG:-latest}"
+    stdin_open: true # equivalent to docker run -i
+    tty: true        # equivalent to docker run -t
+    build:
+      context: src/aidebate
+      dockerfile: ../../Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+    env_file:
+      - .env
+    volumes:
+      - type: bind
+        source: ./src/aidebate
+        target: /aidebate
+      - type: bind
+        source: ./src/resources
+        target: /aidebate/resources # must be within our working directory (i.e. 'aidebate')

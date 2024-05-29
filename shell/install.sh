@@ -21,7 +21,7 @@ python3 -m pip install openai
 python3 -m pip install google-search-results
 python3 -m pip install -U langchain-community
 python3 -m pip install -U langchain-openai
-python3 -m pip install "pyu @ git+https://github.com/poshjosh/pyu@v0.1.1"
+python3 -m pip install "pyu @ git+https://github.com/poshjosh/pyu@v0.1.2"
 
 printf "\nSaving dependencies to requirements.txt\n"
 pip freeze > src/aidebate/requirements.txt

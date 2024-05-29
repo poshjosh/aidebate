@@ -10,7 +10,7 @@ if __name__ == "__main__":
           author_email="posh.bc@gmail.com",
           install_requires=["langchain", "arxiv", "wikipedia", "duckduckgo-search", "langsmith",
                             "openai", "google-search-results", "langchain-community",
-                            "langchain-openai", "pyu>=0.1.1"],
+                            "langchain-openai", "pyu>=0.1.2"],
           license="MIT",
           classifiers=[
               "Programming Language :: Python :: 3",

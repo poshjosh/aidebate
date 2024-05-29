@@ -1,3 +1,4 @@
+-e git+https://github.com/poshjosh/aidebate.git@b61a573141fce7a3bdbf47d91b6448943ec50b39#egg=aidebate
 aiohttp==3.9.5
 aiosignal==1.3.1
 annotated-types==0.7.0
@@ -39,7 +40,7 @@ packaging==23.2
 pydantic==2.7.1
 pydantic_core==2.18.2
 pyreqwest_impersonate==0.4.5
-pyu @ git+https://github.com/poshjosh/pyu@2e383a9516cf1dbeda1c23fd36d031ab9ec7bf20
+-e git+https://github.com/poshjosh/pyu.git@da9a0ea3f9dac63fb4e3cd8044cb06b5dc7dd79d#egg=pyu
 PyYAML==6.0.1
 regex==2024.5.15
 requests==2.31.0
