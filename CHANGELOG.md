@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added 
 
-`requirements.in` for locking down versions of our dependencies.
+- `requirements.in` for locking down versions of our dependencies.
+
+### Changed
+
+- Replaced environment variable `DOCKER_IMAGE_TAG` with `APP_VERSION` 
 
 ## [0.0.2] - 2024-05-29
 

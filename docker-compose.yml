@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: "poshjosh/aidebate:${DOCKER_IMAGE_TAG:-latest}"
+    image: "poshjosh/aidebate:${APP_VERSION:-latest}"
     stdin_open: true # equivalent to docker run -i
     tty: true        # equivalent to docker run -t
     build:
