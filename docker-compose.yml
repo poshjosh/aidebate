@@ -13,8 +13,5 @@ services:
       - .env
     volumes:
       - type: bind
-        source: ./src/aidebate
-        target: /aidebate
-      - type: bind
         source: ./src/resources
         target: /aidebate/resources # must be within our working directory (i.e. 'aidebate')

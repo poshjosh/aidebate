@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 if __name__ == "__main__":
     setup(name="aidebate",
-          version="0.0.2",
+          version="0.0.3-SNAPSHOT",
           description="Easily automate a debate between 2 or more AI agents.",
           author="PyU Team",
           author_email="posh.bc@gmail.com",
