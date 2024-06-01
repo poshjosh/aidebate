@@ -14,4 +14,4 @@ services:
     volumes:
       - type: bind
         source: ./src/resources
-        target: /aidebate/resources # must be within our working directory (i.e. 'aidebate')
+        target: /aidebate/resources # must be within our WORKDIR (i.e. 'aidebate')

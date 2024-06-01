@@ -4,18 +4,23 @@ set -euo pipefail
 
 #@echo off
 
-cd .. || exit 1
+VIRTUAL_ENV_DIR=".venv"
 
-printf "\nCreating virtual environment\n"
-python3 -m venv .venv
+cd ..
 
-printf "\nActivating virtual environment\n"
-source .venv/bin/activate
+if [ ! -d "$VIRTUAL_ENV_DIR" ]; then
+  printf "\nCreating virtual environment: %s\n" "$VIRTUAL_ENV_DIR"
+  python3 -m venv "$VIRTUAL_ENV_DIR"
+fi
+
+printf "\nActivating virtual environment: %s\n" "$VIRTUAL_ENV_DIR"
+
+source "${VIRTUAL_ENV_DIR}/bin/activate"
 
 cd "src/aidebate" || exit 1
 
-printf "\nSaving dependencies to requirements.txt\n"
+printf "\nCompiling dependencies to requirements.txt\n"
 pip-compile requirements.in > requirements.txt
 
-printf "\nInstalling dependencies\n"
+printf "\nInstalling dependencies from requirements.txt\n"
 python3 -m pip install -r requirements.txt

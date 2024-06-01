@@ -39,7 +39,7 @@ dataclasses-json==0.6.6
     # via langchain-community
 distro==1.9.0
     # via openai
-duckduckgo-search==6.1.2
+duckduckgo-search==6.1.4
     # via -r requirements.in
 exceptiongroup==1.2.1
     # via anyio
@@ -75,17 +75,17 @@ langchain==0.2.1
     #   langchain-community
 langchain-community==0.2.1
     # via -r requirements.in
-langchain-core==0.2.1
+langchain-core==0.2.3
     # via
     #   langchain
     #   langchain-community
     #   langchain-openai
     #   langchain-text-splitters
-langchain-openai==0.1.7
+langchain-openai==0.1.8
     # via -r requirements.in
 langchain-text-splitters==0.2.0
     # via langchain
-langsmith==0.1.63
+langsmith==0.1.67
     # via
     #   -r requirements.in
     #   langchain
@@ -103,7 +103,7 @@ numpy==1.26.4
     # via
     #   langchain
     #   langchain-community
-openai==1.30.4
+openai==1.30.5
     # via
     #   -r requirements.in
     #   langchain-openai
@@ -123,9 +123,9 @@ pydantic==2.7.2
     #   openai
 pydantic-core==2.18.3
     # via pydantic
-pyreqwest-impersonate==0.4.6
+pyreqwest-impersonate==0.4.7
     # via duckduckgo-search
-pyu @ git+https://github.com/poshjosh/pyu.git@v0.1.3
+pyu @ git+https://github.com/poshjosh/pyu.git@v0.1.4
     # via -r requirements.in
 pyyaml==6.0.1
     # via
@@ -166,7 +166,7 @@ tiktoken==0.7.0
     # via langchain-openai
 tqdm==4.66.4
     # via openai
-typing-extensions==4.12.0
+typing-extensions==4.12.1
     # via
     #   anyio
     #   openai
