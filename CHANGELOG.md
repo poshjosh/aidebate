@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Sync with host time, when in docker container.
+
 ## [0.0.3] - 2024-06-01
 
 ### Added 
