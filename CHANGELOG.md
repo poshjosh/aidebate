@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Sync with host time, when in docker container.
+- Bump `pyu` to version 0.1.6.
 
 ## [0.0.3] - 2024-06-01
 

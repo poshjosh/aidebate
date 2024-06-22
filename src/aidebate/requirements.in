@@ -8,4 +8,4 @@ openai
 google-search-results
 langchain-community
 langchain-openai
-git+https://github.com/poshjosh/pyu.git@v0.1.4#egg=pyu
+git+https://github.com/poshjosh/pyu.git@v0.1.6#egg=pyu
