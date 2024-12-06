@@ -4,7 +4,11 @@
 
 Simply set the debate topic and list of personas, 
 run the app and watch the AI personas debate.
- 
+
+### Installation
+
+- To install, run the [shell/install.sh](shell/install.sh) script (_Run this script any time you update dependencies_).
+
 ### Quick Start
 
 1. Install the app by running [shell/install.sh](shell/install.sh) in a command prompt.
@@ -23,10 +27,20 @@ run the app and watch the AI personas debate.
     APP_DIALOGUE_MODEL_PROVIDER="[OPTIONAL, default=openai]"
     APP_DIALOGUE_MODEL="[OPTIONAL, default=gpt-4]"
     ```
-    
-    For a full ist of environment variables, see [Environment](docs/environment.md).
 
-3. Run the app by running [shell/run.sh](shell/run.sh) in a command prompt. 
+   For a full ist of environment variables, see [Environment](docs/environment.md).
+
+3. Run the app by running [shell/run.sh](shell/run.sh) in a command prompt.
+
+### Development
+
+- If you want to do some development or run tests, run the [shell/install.dev.sh](shell/install.dev.sh) script (only once).
+- &#10060; &#9888; Do not update `requirements.txt` directly. Rather update `requirements.in` and run [shell/install.sh](shell/install.sh)
+- &#9989; Update the [CHANGELOG.md](CHANGELOG.md) file, with your changes.
+
+### Testing
+
+- To run the tests, run the [shell/run.tests.sh](shell/run.tests.sh) script.
 
 ### Notes
 
